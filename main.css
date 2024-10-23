@@ -1,0 +1,183 @@
+/* #region General Styles */
+html {
+  overflow: -moz-scrollbars-none; 
+  scrollbar-width: none; 
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif; 
+  color: #333;
+  
+  background-size: cover; 
+  background-position: center; 
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+/* #endregion */
+
+/* #region Header and navigation Styles */
+/* Add styles for the navigation bar */
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+header nav {
+  text-align: center;
+  transition: 0.3s ease-in-out; /* Add a smooth transition */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  width: 120px; /* adjust the width to your liking */
+}
+
+header nav ul {
+  list-style: none; 
+  padding: 0;
+  display: flex;
+}
+
+header nav li {
+  margin-right: 55px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  color: #ccc;
+}
+/* #endregion */
+
+/* Add this new class for header description */
+.header-description {
+  text-align: center; /* Ensure the header description is centered */
+  margin: 0 auto; /* Center the paragraph */
+  max-width: 1000px; /* Set a maximum width for the paragraph */
+  text-align: center; /* Justify the text */
+}
+
+/* header-content section */
+/* Update the styles to target the header-content div */
+.header-content {
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  padding: 200px;
+}
+
+.header-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/bgs/header-content-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 0.5s ease-in, zoomIn 60s linear forwards;
+  z-index: -1;
+}
+
+.header-content h1 {
+  font-size: 80px;
+  font-weight: bolder; /* Make the title bold */
+  letter-spacing: -2px; /* Adjust letter spacing closer */
+  width: auto; /* Allow the title to be wider */
+  text-align: center; /* Align the title to the left */
+  color: white; /* Change text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+  animation: fadeIn 0.5s ease-in;
+}
+
+.header-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center; /* Align the paragraph to the center */
+  color: white; /* Change text color to white */
+  animation: fadeIn 0.5s ease-in;
+}
+/*Endregion */
+
+/* Add this new animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+/* Add this new animation for zoom-in effect */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  20% {
+    transform: scale(1.08);
+  }
+  30% {
+    transform: scale(1.11);
+  }
+  50% {
+    transform: scale(1.14);
+  }
+  70% {
+    transform: scale(1.17);
+  }
+  100% {
+    transform: scale(1.20);
+  }
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  header {
+    padding: 100px; /* Reduce padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 40px; /* Decrease font size for the title */
+  }
+
+  header p {
+    font-size: 18px; /* Decrease font size for the paragraph */
+    margin-bottom: 20px; /* Reduce margin for the paragraph */
+  }
+
+  .header-description {
+    max-width: 90%; /* Allow more width on smaller screens */
+  }
+}
+/* #endregion */
+
+/* #region Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+/* #endregion */

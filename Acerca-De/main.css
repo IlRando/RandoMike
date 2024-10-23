@@ -1,0 +1,327 @@
+/* #region General Styles */
+html {
+    overflow: -moz-scrollbars-none; 
+    scrollbar-width: none; 
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif; 
+    color: #333;
+    background-color: #e9eefd;
+    background-size: cover; 
+    background-position: center; 
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; 
+  }
+  /* #endregion */
+  
+  /* #region Header and navigation Styles */
+  /* Add styles for the navigation bar */
+  header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  
+  header nav {
+    text-align: center;
+    transition: 0.3s ease-in-out; /* Add a smooth transition */
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    width: 120px; /* adjust the width to your liking */
+  }
+  
+  header nav ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav li {
+    margin-right: 55px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  header nav a:hover {
+    color: #ccc;
+  }
+  /* #endregion */
+  
+  /* Conócele content section */
+  .know-content {
+    text-align: center;
+    position: relative;
+  }
+
+  .know-content h1 {
+    font-size: 50px; /* adjust the font size as needed */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #a8c4ff;
+  }  
+
+  .conocele-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #a8c4ff;
+  }
+
+  .conocele-content {
+    display: flex;
+    justify-content: space-between;
+  }  
+
+  .left-section {
+    width: 50%; /* Take up half the width */
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 346px;
+    gap: 12px;
+    margin-top: 153px;
+  }
+
+.rounded-button {
+  font-family: 'Comic Sans MS', sans-serif; 
+  background-color: #9abadb; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-bottom: 10px; /* Margin between buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  width: 300px;
+  height: 68px;
+}
+
+.rounded-button:hover {
+  background-color: #2a91ff; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.rounded-button.active {
+  background-color: #007bff; /* Active color */
+}  
+
+  .button-description-container {
+    margin-left: 25px; /* adjust the margin as needed */
+    flex: 1; /* make the description container take up the remaining space */
+    margin-top: 150px;
+  }
+  
+  .button-description {
+    margin-bottom: 0;
+  }
+
+  .button-with-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .button-with-text button {
+    margin-right: 10px;
+  }
+  
+  .button-with-text p {
+    margin-bottom: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .active {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .right-section {
+    width: 25%; /* Take up half the width */
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+  }
+  
+  .image-button {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .image-button img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .alt-image-container {
+    width: 80%; /* Adjust the width as needed */
+    height: 80%; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .alt-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* #endregion */
+
+  /* Add this new class for header description */
+  .header-description {
+    text-align: center; /* Ensure the header description is centered */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 1000px; /* Set a maximum width for the paragraph */
+    text-align: center; /* Justify the text */
+  }
+  
+  /* header-content section */
+  /* Update the styles to target the header-content div */
+  .header-content {
+    text-align: center;
+    position: relative;
+    padding: 60px;
+  }
+  
+  .header-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bgs/header-content-bg-about.jpeg');
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 0.5s ease-in, 60s linear forwards;
+    z-index: -1;
+  }
+  
+  .header-content h1 {
+    font-size: 80px;
+    font-weight: bolder; /* Make the title bold */
+    letter-spacing: -2px; /* Adjust letter spacing closer */
+    width: auto; /* Allow the title to be wider */
+    text-align: center; /* Align the title to the left */
+    color: rgb(230, 225, 225); /* Change text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .header-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center; /* Align the paragraph to the center */
+    color: rgb(216, 216, 216); /* Change text color to white */
+    animation: fadeIn 0.5s ease-in;
+  }
+  /*Endregion */
+  
+  /* Add this new animation for fade-in effect */
+  @keyframes fadeIn {
+      from {
+          opacity: 0; /* Start fully transparent */
+      }
+      to {
+          opacity: 1; /* End fully opaque */
+      }
+  }
+  
+
+  @media (max-width: 768px) { /* Adjust styles for mobile devices */
+    header {
+      padding: 100px; /* Reduce padding for smaller screens */
+    }
+  
+    header h1 {
+      font-size: 40px; /* Decrease font size for the title */
+    }
+  
+    header p {
+      font-size: 18px; /* Decrease font size for the paragraph */
+      margin-bottom: 20px; /* Reduce margin for the paragraph */
+    }
+  
+    .header-description {
+      max-width: 90%; /* Allow more width on smaller screens */
+    }
+  }
+  /* #endregion */
+ 
+  /* #region Socials Styles */  
+  #Socials {
+    background-color: #bcb8fc;
+    padding: 10px 20px 30px;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .social-links img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.1);
+  }
+  
+  #Socials img:hover {
+    transform: scale(1.1); /* Grow effect on hover */
+  }
+  
+  .social-links a {
+    display: inline-block; /* Display as inline-block elements to respect vertical margins */
+    margin: 8px 8px 8px 8px; /* Add margin to separate buttons horizontally and vertically */
+  }
+  /* #endregion */
+
+  /* #region Footer Styles */
+  footer {
+    background-color: #bcb8fc;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+  }
+  /* #endregion */
+  

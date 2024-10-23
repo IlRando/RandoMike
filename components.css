@@ -1,0 +1,185 @@
+/* #region General Styles */
+#Projects {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#Projects h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 300px;
+  margin: 20px;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* #endregion */
+
+/* #region Socials Styles */
+#Socials {
+  background-color: #f9f9f9;
+  padding: 10px 20px 30px;
+  text-align: center;
+}
+
+#Socials h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#Socials img {
+  width: 300px; /* Set a fixed width to prevent overlap */
+  height: 80px; /* Set a fixed height to prevent overlap */
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#Socials img:hover {
+  transform: scale(1.1); /* Grow effect on hover */
+}
+
+.social-links a {
+  display: inline-block; /* Display as inline-block elements to respect vertical margins */
+  margin: 8px 8px 8px 8px; /* Add margin to separate buttons horizontally and vertically */
+}
+/* #endregion */
+
+/* #region Repo Styles */
+.repo {
+  display: inline-block; /* Allows the repo divs to sit next to each other */
+  width: 300px; /* Set a fixed width for the rectangular shape */
+  height: 500px; /* Set a fixed height for the rectangular shape */
+  margin: 10px; /* Add some space between the repo divs */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  padding: 15px; /* Optional: Add padding inside the repo div */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  overflow: hidden; /* Hide overflow text */
+  cursor: pointer;
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease-in; /* Smooth transition for opacity */
+}
+
+.repo.animate {
+  opacity: 1; /* Set to fully visible when animated */
+  animation: slideIn 0.5s ease-in forwards; /* Add slide-in animation */
+}
+
+.repo h2 {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  border-bottom: 1px solid lightgray; /* Add a light gray bottom border */
+  padding-bottom: 5px; /* Add some padding below the text */
+  margin-bottom: 10px; /* Add margin below the title */
+  font-weight: normal; /* Set font weight to normal for a cleaner look */
+  color: #333; /* Set a darker color for better readability */
+}
+
+.repo-cover {
+  width: 250px; /* Set width to 250px */
+  height: 250px; /* Set height to 250px */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+.repo-stats {
+  border-top: 1px solid lightgrey; /* Add a light grey line above the stats */
+  padding-top: 10px; /* Add some padding above the stats */
+  margin-top: auto; /* Push the stats to the bottom */
+}
+
+/* New sliding animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px); /* Start 20px below */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End at original position */
+    opacity: 1; /* End fully visible */
+  }
+}
+/* #endregion */
+
+/* #region Load More button */
+.load-more {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for better size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 auto; /* Center the button horizontally */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.load-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.load-more:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* #endregion */
+
+/* #region loader styles */
+.dots {
+   display: flex; /* Use flexbox for centering */
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+   width: 40px;
+   height: 19.2px;
+   padding: 10px;
+   background: radial-gradient(circle closest-side,#474bff 90%,#0000) 0%   50%,
+          radial-gradient(circle closest-side,#474bff 90%,#0000) 50%  50%,
+          radial-gradient(circle closest-side,#474bff 90%,#0000) 100% 50%;
+   background-size: calc(100%/3) 9.6px;
+   background-repeat: no-repeat;
+   animation: dots-7ar3yq 1s infinite linear;
+   margin: 0 auto; /* Center the dots div */
+}
+
+@keyframes dots-7ar3yq {
+   20% {
+      background-position: 0%   0%, 50%  50%,100%  50%;
+   }
+
+   40% {
+      background-position: 0% 100%, 50%   0%,100%  50%;
+   }
+
+   60% {
+      background-position: 0%  50%, 50% 100%,100%   0%;
+   }
+
+   80% {
+      background-position: 0%  50%, 50%  50%,100% 100%;
+   }
+}
+/* #endregion */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
